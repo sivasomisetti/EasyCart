@@ -12,13 +12,16 @@
 // });
 
 // src/app/api/inngest/route.js
+// src/app/api/inngest/route.js
+// src/app/api/inngest/route.js
 import { serve } from "inngest/next";
-import { inngest, syncUserCreation } from "../../../config/inggest";
+import { inngest, syncUserCreation, syncUserUpdation, syncUserDeletion } from "@/config/inggest"; // CORRECTED import path
 
-// Create an API that serves zero functions
 export const { GET, POST, PUT } = serve({
   client: inngest,
   functions: [
-    syncUserCreation // Your function is imported from inggest.js
+    syncUserCreation,
+    syncUserUpdation,
+    syncUserDeletion
   ],
 });
