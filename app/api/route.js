@@ -14,8 +14,9 @@
 // src/app/api/inngest/route.js
 // src/app/api/inngest/route.js
 // src/app/api/inngest/route.js
+// src/app/api/inngest/route.js
 import { serve } from "inngest/next";
-import { inngest, syncUserCreation, syncUserUpdation, syncUserDeletion } from "@/config/inggest"; // CORRECTED import path
+import { inngest, syncUserCreation, syncUserUpdation, syncUserDeletion } from "../../../config/inggest"; // CORRECTED to a relative path
 
 export const { GET, POST, PUT } = serve({
   client: inngest,
